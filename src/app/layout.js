@@ -2,6 +2,7 @@ import { Poppins, Roboto } from 'next/font/google';
 
 import './globals.css';
 import Navbar from '@/components/layout/nav';
+import CursorFollower from '@/components/utils/cursorFollower';
 import SmoothScroll from '@/components/utils/smoothScroll/SmoothScroll';
 
 import { Providers } from './provides';
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <Providers>
         <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
           <div className="">
+            <CursorFollower />
             <Navbar />
             <SmoothScroll>{children}</SmoothScroll>
           </div>
